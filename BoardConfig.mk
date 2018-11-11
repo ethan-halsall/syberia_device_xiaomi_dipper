@@ -16,6 +16,9 @@ TARGET_OTA_ASSERT_DEVICE := dipper
 # Kernel
 TARGET_KERNEL_CONFIG := dipper_defconfig
 
+# Wifi
+WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
+
 # NFC
 TARGET_USES_NQ_NFC := true
 
