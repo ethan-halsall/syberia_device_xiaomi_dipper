@@ -7,10 +7,7 @@
 # Inherit from sdm845-common
 -include device/xiaomi/sdm845-common/BoardConfigCommon.mk
 
-# Kernel clang
-TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := 8.0.4
-
+#Device
 DEVICE_PATH := device/xiaomi/dipper
 
 # Assert
@@ -30,3 +27,4 @@ TARGET_FACE_UNLOCK_CAMERA_ID := 5
 
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+SELINUX_IGNORE_NEVERALLOWS := true
