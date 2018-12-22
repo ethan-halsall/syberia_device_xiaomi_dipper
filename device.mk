@@ -53,6 +53,10 @@ PRODUCT_PACKAGES += \
     SecureElement \
     Tag
 
+# OTA Updates
+PRODUCT_PACKAGES += \
+    Updates
+
 # Hide
 PRODUCT_PACKAGES += \
     NoCutoutOverlay
