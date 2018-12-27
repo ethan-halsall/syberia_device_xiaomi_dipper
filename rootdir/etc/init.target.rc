@@ -1,2 +1,5 @@
 on init
     mount none /system/etc/manifest.xml /vendor/etc/vintf/manifest.xml bind
+
+on property:sys.boot_completed=1
+    write /sys/class/thermal/thermal_message/sconfig 10
