@@ -13,4 +13,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #Assistant
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opa.eligible_device=true 
+    ro.opa.eligible_device=true
+    
+# Display density
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=420
