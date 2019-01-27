@@ -18,6 +18,4 @@ LOCAL_PATH := $(call my-dir)
 ifeq ($(TARGET_DEVICE),dipper)
 subdir_makefiles=$(call first-makefiles-under,$(LOCAL_PATH))
 $(foreach mk,$(subdir_makefiles),$(info including $(mk) ...)$(eval include $(mk)))
-# Hide overlay
-include device/xiaomi/dipper/overlay/packages/apps/overlays/NoCutoutOverlay/Android.mk
 endif
