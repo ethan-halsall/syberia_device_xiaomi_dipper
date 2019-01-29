@@ -37,4 +37,10 @@
 
     <!-- Whether the device supports Smart Pixels -->
     <bool name="config_enableSmartPixels">true</bool>
+
+     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
+         May be less than the minimum allowed brightness setting
+         that can be set by the user. -->
+    <integer name="config_screenBrightnessDoze">4</integer>
+
 </resources>
