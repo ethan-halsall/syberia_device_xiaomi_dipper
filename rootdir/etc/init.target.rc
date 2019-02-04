@@ -1,14 +1,5 @@
 on init
     mount none /system/etc/manifest.xml /vendor/etc/vintf/manifest.xml bind
 
-on property:persist.syberia.perfmode=0
-    write /sys/class/thermal/thermal_message/sconfig 2
-    
-on property:persist.syberia.perfmode=1
-    write /sys/class/thermal/thermal_message/sconfig 0
-
-on property:persist.syberia.perfmode=2
-    write /sys/class/thermal/thermal_message/sconfig 13
-
-on property:persist.syberia.perfmode=3
+on property:sys.boot_completed=1
     write /sys/class/thermal/thermal_message/sconfig 10
