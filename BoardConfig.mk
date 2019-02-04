@@ -14,7 +14,7 @@ DEVICE_PATH := device/xiaomi/dipper
 TARGET_OTA_ASSERT_DEVICE := dipper
 
 # Kernel
-TARGET_KERNEL_CONFIG := dipper_defconfig
+TARGET_KERNEL_CONFIG := simple_defconfig
 
 # Wifi
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
