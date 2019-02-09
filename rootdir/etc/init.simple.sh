@@ -62,6 +62,9 @@ echo 1 > /dev/stune/schedtune.prefer_idle
 #Configure Thermal Profile
 echo 10 > /sys/class/thermal/thermal_message/sconfig
 
+# Enable Power Efficient Workqueques
+echo 1 > /sys/module/workqueue/parameters/power_efficient
+
 }
 
 setSimpleConfig &
