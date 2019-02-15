@@ -13,13 +13,13 @@ echo f > /proc/irq/default_smp_affinity
 echo "bfq" > /sys/block/sda/queue/scheduler
 echo 256 > /sys/block/sda/queue/read_ahead_kb
 echo 256 > /sys/block/sda/queue/nr_requests
-echo 1 > /sys/block/sda/queue/iostats
+echo 0 > /sys/block/sda/queue/iostats
 echo 256 > /sys/block/sdf/queue/read_ahead_kb
 echo 256 > /sys/block/sdf/queue/nr_requests
-echo 1 > /sys/block/sdf/queue/iostats
+echo 0 > /sys/block/sdf/queue/iostats
 
 #Setup cpu_input_boost parameters
-echo 15 > sys/module/cpu_input_boost/parameters/dynamic_stune_boost
+echo 10 > sys/module/cpu_input_boost/parameters/dynamic_stune_boost
 
 # Enable scheduler core_ctl
 echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/enable
@@ -61,9 +61,6 @@ echo 1 > /dev/stune/schedtune.prefer_idle
 
 #Configure Thermal Profile
 echo 10 > /sys/class/thermal/thermal_message/sconfig
-
-# Enable Power Efficient Workqueques
-echo 1 > /sys/module/workqueue/parameters/power_efficient
 
 }
 
