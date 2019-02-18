@@ -19,7 +19,7 @@ echo 256 > /sys/block/sdf/queue/nr_requests
 echo 0 > /sys/block/sdf/queue/iostats
 
 #Setup cpu_input_boost parameters
-echo 10 > sys/module/cpu_input_boost/parameters/dynamic_stune_boost
+echo 15 > sys/module/cpu_input_boost/parameters/dynamic_stune_boost
 
 # Enable scheduler core_ctl
 echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/enable
@@ -37,7 +37,7 @@ echo 1209600 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq
 echo 1 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/pl
 echo 500 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
 echo 20000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us 
-echo 1 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/iowait_boost_enable
+echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/iowait_boost_enable
 	
 # configure governor settings for big cluster
 echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
@@ -45,7 +45,7 @@ echo 1574400 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_freq
 echo 1 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/pl
 echo 500 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us
 echo 20000 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us 
-echo 1 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/iowait_boost_enable
+echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/iowait_boost_enable
 
 #Enable suspend to idle mode to reduce latency during suspend/resume
 echo "s2idle" > /sys/power/mem_sleep
