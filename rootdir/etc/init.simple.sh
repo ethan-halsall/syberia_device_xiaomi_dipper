@@ -19,7 +19,7 @@ echo 256 > /sys/block/sdf/queue/nr_requests
 echo 0 > /sys/block/sdf/queue/iostats
 
 #Setup cpu_input_boost parameters
-echo 15 > sys/module/cpu_input_boost/parameters/dynamic_stune_boost
+echo 10 > sys/module/cpu_input_boost/parameters/dynamic_stune_boost
 
 # Enable scheduler core_ctl
 echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/enable
@@ -54,10 +54,10 @@ echo "s2idle" > /sys/power/mem_sleep
 echo "NO_FBT_STRICT_ORDER" > /sys/kernel/debug/sched_features
 
 #Stune
-echo 1 > /dev/stune/top-app/schedtune.prefer_idle 
 echo 1 > /dev/stune/background/schedtune.prefer_idle
-echo 1 > /dev/stune/foreground/schedtune.prefer_idle
 echo 1 > /dev/stune/schedtune.prefer_idle
+echo 5 > /dev/stune/foreground/schedtune.sched_boost
+echo 5 > /dev/stune/rt/schedtune.sched_boost
 
 #Configure Thermal Profile
 echo 10 > /sys/class/thermal/thermal_message/sconfig
